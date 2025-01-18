@@ -1,36 +1,43 @@
 {
   "expo": {
-    "name": "dbm-vpp-converter",
-    "slug": "dbm-vpp-converter",
-    "version": "1.0.0",
+    "name": "Power Voltage Converter",
+    "slug": "power-voltage-converter",
+    "version": "0.1",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/icon.png",
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
-    "ios": {
-      "supportsTablet": true
-    },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
-    },
-    "web": {
-      "bundler": "metro",
-      "output": "static",
-      "favicon": "./assets/images/favicon.png"
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ff829ebc"
+      },
+      "package": "com.diana.powervoltageconverter"
     },
     "plugins": [
       "expo-router",
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "enableProguardInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true,
+            "useLegacyPackaging": true,
+            "extraMavenRepos": [
+              "https://maven.aliyun.com/repository/public",
+              "https://maven.aliyun.com/repository/google",
+              "https://maven.aliyun.com/repository/gradle-plugin"
+            ]
+          }
         }
       ]
     ],
